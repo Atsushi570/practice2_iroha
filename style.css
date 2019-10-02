@@ -72,6 +72,13 @@ h2
 	}
 }
 
+@media screen and (max-width: 414px)		/* 414x以下*/
+{
+	.btn-lg{
+		font-size: 2.9vw;
+		padding: 2.8vw 6.4vw;
+	}
+}
 /*--------------------------------------------------------------
 # HEADER
 --------------------------------------------------------------*/
@@ -435,7 +442,7 @@ h2
 	letter-spacing : 0.15vw;
 }
 
-.about-content > .btn-lg
+.btn-lg-wrapper > .btn-lg
 {
 	margin-left : 8.1vw;
 }
@@ -451,4 +458,102 @@ h2
 	width : 36.35vw;
 	height : auto;
 	padding-bottom : 4.1vw;
+}
+
+@media screen and (max-width: 768px)		/* 768px以下*/
+{
+	.about-content
+	{
+		height : 52vw;
+	}
+
+	.about-images img
+	{
+		position : absolute;
+		padding : 0;
+	}
+	.about-images img:first-child
+	{
+		right : 4vw;
+		bottom : 3vw;
+		width : 43vw;
+	}
+
+	.about-images img:last-child
+	{
+		right : 39vw;
+		bottom : 0;
+		width : 21.5vw;
+	}
+}
+
+@media screen and (max-width: 413px)		/* 413px以下*/
+{
+	.about
+	{
+		padding : 0;
+	}
+
+	.about::before
+{
+	top : 18vw;
+	left : 40%;
+	width : 59.8vw;
+	height : 170vw;
+	background : #f8f8f8;
+	content : '';
+}	
+
+	.about .container
+	{
+		display : block;
+		padding:0;	
+	}
+
+	.about-content{
+		height: auto;
+	}
+
+	.about-content h2
+	{
+		margin: 0;
+		padding : 22vw 0;
+		font-size : 5.3vw;
+		text-align : center;
+	}
+
+	.about-content p{
+		padding-left: 11.3vw;
+		padding-bottom: 6.4vw;
+		font-size: 3.6vw;
+	}
+
+	.about-content .btn-lg-wrapper{
+		text-align: right;
+		margin-right: 3vw;
+	}
+
+	.about-images
+	{
+		display : block;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.about-images img
+	{
+		position : static;
+	}
+
+	.about-images img:first-child
+	{
+		width : 65.4vw;
+		margin-left: auto;
+	}
+
+	.about-images img:last-child
+	{
+		padding-top: 6.5vw;
+		width : 51.7vw;
+	}
 }
