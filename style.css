@@ -4,6 +4,7 @@
 # GLOBAL
 # HEADER
 # ABOUT
+# LODGE
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -28,6 +29,7 @@ header
 body
 {
 	font-size : 1.6rem;		/* 1rem = 16px*/
+
 	letter-spacing : 0.1em;
 }
 
@@ -41,7 +43,16 @@ h2
 {
 	font-size : 2.6vw;
 	font-weight : 100;
+
+	margin : 0;
+
 	letter-spacing : 0.26vw;
+}
+
+p
+{
+	font-size : 1vw;
+	line-height : 1.7;
 }
 
 .container
@@ -50,15 +61,24 @@ h2
 	padding-left : 8.1vw;
 }
 
+.section-title
+{
+	text-shadow : 3px 3px 2px gray;
+	text-shadow : 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
 .btn-lg
 {
+	font-size : 1vw;
+
 	width : 10.4vw;
 	height : 3.39vw;
 	padding : 1vw 2vw;
-	border : 1px #707070 solid;
-	color : black;
-	font-size : 1vw;
+
 	text-decoration : none;
+
+	color : black;
+	border : 1px #707070 solid;
 }
 
 @media screen and (max-width: 768px)		/* 768px以下*/
@@ -74,9 +94,16 @@ h2
 
 @media screen and (max-width: 414px)		/* 414x以下*/
 {
-	.btn-lg{
-		font-size: 2.9vw;
-		padding: 2.8vw 6.4vw;
+	.btn-lg
+	{
+		font-size : 2.9vw;
+
+		padding : 2.8vw 6.4vw;
+	}
+
+	.section-title
+	{
+		font-size : 6vw;
 	}
 }
 /*--------------------------------------------------------------
@@ -91,23 +118,28 @@ h2
 .header-wrapper::after
 {
 	display : block;
+
 	margin : 0;
 	padding-top : 56.25%;		/*16:9*/
+
 	content : '';
 }
 
 .site-navigation
 {
-	display : flex;
 	position : absolute;
 	z-index : 99;
+
+	display : flex;
+	justify-content : center;
+
 	width : 100%;
-	background : black;
-	background : rgba(0, 0, 0, 0.7);
-	color : white;
+
 	text-align : center;
 
-	justify-content : center;
+	color : white;
+	background : black;
+	background : rgba(0, 0, 0, 0.7);
 }
 
 .site-logo-wrapper
@@ -122,22 +154,24 @@ h2
 
 .site-logo-wrapper h1 > small
 {
-	margin-right : 2vw;
 	font-size : 0.575em;
+
+	margin-right : 2vw;
 }	
 
 .site-logo-wrapper h1 > p
 {
+	font-size : 0.375em;
+
 	display : block;
+
 	margin : auto;
 	margin-top : 5px;
-	font-size : 0.375em;
 }
 
 .nav-menu
 {
 	display : flex;
-
 	align-items : center;
 }
 
@@ -148,22 +182,27 @@ h2
 
 .nav-menu li a
 {
-	color : white;
 	font-size : 1.3vw;
+
 	text-decoration : none;
+
+	color : white;
 }
 
 .nav-menu li p
 {
-	margin : 3% 0 0 0;
 	font-size : 0.5em;
+
+	margin : 3% 0 0 0;
 }
 
 .btn-menu
 {
 	display : none;
+
 	margin-top : 2vw;
 	margin-bottom : 2vw;
+
 	cursor : pointer;
 }
 
@@ -178,6 +217,7 @@ h2
 	z-index : 0;
 	top : 0;
 	left : 0;
+
 	width : 100%;
 	height : auto;
 }
@@ -207,14 +247,17 @@ h2
 	.site-navigation
 	{
 		display : block;
+
 		background : none;
 	}
 
 	.site-logo-wrapper
 	{
 		display : flex;
+
 		width : 100%;
 		margin : 0;
+
 		background : black;
 		background : rgba(0, 0, 0, 0.7);
 	}
@@ -222,6 +265,7 @@ h2
 	.site-logo-wrapper > h1
 	{
 		display : block;
+
 		width : 40%;
 		height : 7vw;
 		margin : 0;
@@ -237,10 +281,10 @@ h2
 	#btnMenu
 	{
 		display : flex;
+		align-items : center;
+
 		margin-right : 3vw;
 		margin-left : auto;
-
-		align-items : center;
 	}
 
 	/* ハンバーガーメニューのアイコン */
@@ -249,12 +293,15 @@ h2
 	.btn-menu span::after
 	{
 		display : block;
+
 		width : 3.9vw;	/*長さ*/
 		height : 2px;		/*線の太さ*/
-		border-radius : 2px;
-		background : white;
+
 		content : '';
 		cursor : pointer;
+
+		border-radius : 2px;
+		background : white;
 	}
 
 	.btn-menu.nav-open span
@@ -284,14 +331,18 @@ h2
 
 	.nav-wrapper
 	{
-		display : block;
 		position : relative;
+
+		display : block;
+
 		width : 100%;
 		height : 43.5vw;
 		padding : 1vw 0 1vw 0;
+
+		transform : translate(100%, 0);
+
 		background : black;
 		background : rgba(0, 0, 0, 0.7);
-		transform : translate(100%, 0);
 	}
 
 	.nav-wrapper.nav-open
@@ -309,10 +360,10 @@ h2
 	.nav-menu
 	{
 		flex-direction : column;
+		justify-content : center;
+
 		margin : 0;
 		padding : 0;
-
-		justify-content : center;
 	}
 
 	.nav-menu > li
@@ -322,24 +373,28 @@ h2
 
 	.nav-menu li a
 	{
-		display : block;
-		height : 100%;
 		font-size : 1.95vw;
+
+		display : block;
+
+		height : 100%;
 	}
 
 	.nav-menu li p
 	{
+		font-size : 1.69vw;
+
 		margin : 0;
 		padding-top : 1vw;
-		font-size : 1.69vw;
 	}
 
 	.icon-wrapper
 	{
-		display : inline-block;
 		position : absolute;
 		right : 0;
 		bottom : 0 ;
+
+		display : inline-block;
 	}
 
 	.icon-wrapper > a > img
@@ -388,6 +443,7 @@ h2
 	.icon-wrapper
 	{
 		position : static;
+
 		padding-top : 10vw;
 	}
 
@@ -409,23 +465,30 @@ h2
 .about
 {
 	position : relative;
+
 	padding-top : 8vw;
 }
+
 .about::before
 {
 	position : absolute;
 	z-index : -1;
 	top : 18vw;
 	left : 23.1vw;
+
 	width : 59.8vw;
 	height : 36.4vw;
-	background : #f8f8f8;
+
 	content : '';
+
+	background : #f8f8f8;
 }	
 
-.about > div
+.about .container
 {
 	display : flex;
+
+	margin-bottom : 7vw;
 }
 
 .about-content > h2
@@ -435,10 +498,12 @@ h2
 
 .about-content > p
 {
-	padding-bottom : 2.86vw;
 	font-size : 1.5vw;
 	font-weight : 400;
 	line-height : 1.4;
+
+	padding-bottom : 2.86vw;
+
 	letter-spacing : 0.15vw;
 }
 
@@ -455,6 +520,7 @@ h2
 .about-images img
 {
 	display : block;
+
 	width : 36.35vw;
 	height : auto;
 	padding-bottom : 4.1vw;
@@ -470,12 +536,14 @@ h2
 	.about-images img
 	{
 		position : absolute;
+
 		padding : 0;
 	}
 	.about-images img:first-child
 	{
 		right : 4vw;
 		bottom : 3vw;
+
 		width : 43vw;
 	}
 
@@ -483,6 +551,7 @@ h2
 	{
 		right : 39vw;
 		bottom : 0;
+
 		width : 21.5vw;
 	}
 }
@@ -495,49 +564,60 @@ h2
 	}
 
 	.about::before
-{
-	top : 18vw;
-	left : 40%;
-	width : 59.8vw;
-	height : 170vw;
-	background : #f8f8f8;
-	content : '';
-}	
+	{
+		top : 18vw;
+		left : 40%;
+
+		width : 59.8vw;
+		height : 170vw;
+
+		content : '';
+
+		background : #f8f8f8;
+	}
 
 	.about .container
 	{
 		display : block;
-		padding:0;	
+
+		padding : 0;
 	}
 
-	.about-content{
-		height: auto;
+	.about-content
+	{
+		height : auto;
 	}
 
 	.about-content h2
 	{
-		margin: 0;
-		padding : 22vw 0;
 		font-size : 5.3vw;
+
+		margin : 0;
+		padding : 22vw 0;
+
 		text-align : center;
 	}
 
-	.about-content p{
-		padding-left: 11.3vw;
-		padding-bottom: 6.4vw;
-		font-size: 3.6vw;
+	.about-content p
+	{
+		font-size : 3.6vw;
+
+		padding-bottom : 6.4vw;
+		padding-left : 11.3vw;
 	}
 
-	.about-content .btn-lg-wrapper{
-		text-align: right;
-		margin-right: 3vw;
+	.about-content .btn-lg-wrapper
+	{
+		margin-right : 3vw;
+
+		text-align : right;
 	}
 
 	.about-images
 	{
 		display : block;
-		display: flex;
-		flex-direction: column-reverse;
+		display : flex;
+		flex-direction : column-reverse;
 	}
 
 	.about-images img
@@ -548,12 +628,169 @@ h2
 	.about-images img:first-child
 	{
 		width : 65.4vw;
-		margin-left: auto;
+		margin-left : auto;
 	}
 
 	.about-images img:last-child
 	{
-		padding-top: 6.5vw;
 		width : 51.7vw;
+		padding-top : 6.5vw;
+	}
+}
+
+/*--------------------------------------------------------------
+# LODGE
+--------------------------------------------------------------*/
+.lodge
+{
+	padding-top : 6.5vw;
+
+	background-color : #f2f2f2;
+}
+
+.lodge .container
+{
+	position : relative;
+}
+
+.lodge .container::after
+{
+	display : block;
+
+	padding-bottom : 40vw;
+
+	content : '';
+}
+
+.lodge .section-title::after
+{
+	font-size : 5.5vw;
+
+	position : absolute;
+	top : 0;
+	left : 0;
+
+	content : 'Lodge';
+	transform : translate(0 , 50%) rotate(270deg);
+
+	opacity : 0.1;
+	color : gray;
+	color : rgba(0, 0, 0, 0.8);
+}
+
+.lodge-content-wrapper
+{
+	position : absolute;
+	z-index : 2;
+	top : 11vw;
+	left : 13vw;
+
+	padding-bottom : 2.6vw;
+
+	background-color : rgba(255, 255, 255, 0.9);
+}
+
+.lodge-content-wrapper p
+{
+	display : block;
+
+	margin : 0;
+	padding : 4vw 8vw 4vw 4vw;
+}
+
+.lodge-content-wrapper .btn-lg-wrapper
+{
+	margin : 0;
+
+	text-align : right;
+}
+
+.lodge-content-wrapper .btn-lg-wrapper .btn-lg
+{
+	margin : 0 4vw 0 0 ;
+}
+
+.lodge-image
+{
+	position : absolute;
+	z-index : 1;
+	top : 3.8vw;
+	right : 3.8vw;
+
+	width : 46vw;
+	height : auto;
+}
+
+.lodge-repeat-image
+{
+	width : 80vw;
+	height : auto;
+	padding-left : 13vw;
+}
+
+@media screen and (max-width: 768px)		/* 768px以下*/
+{
+	.lodge-content-wrapper
+	{
+		top : 6vw;
+	}
+}
+
+@media screen and (max-width: 768px)		/* 413px以下*/
+{
+	.lodge .container
+	{
+		padding-right : 0;
+		padding-left : 0;
+	}
+
+	.lodge .container::after{
+		display: none;
+	}
+
+	.lodge .section-title
+	{
+		text-align : center;
+	}
+
+	.lodge .section-title::after
+	{
+		font-size : 19vw;
+		top : 0;
+		left : 0;
+
+		transform : translate(-15% , 140%) rotate(270deg);
+		}
+
+
+	.lodge-content-wrapper
+	{
+		position : static;
+
+		margin : 16vw 0 6vw 25vw;
+		padding-top : 4vw;
+		padding-bottom : 8vw;
+	}
+
+	.lodge-content-wrapper p
+	{
+		font-size : 3.6vw;
+		padding-left: 8vw;
+		padding-bottom: 9vw;
+	}
+
+	.lodge-content-wrapper .btn-lg-wrapper{
+		font-size: 2.8vw;	
+	}
+
+	.lodge-image
+	{
+		position : static;
+		width: 100%;
+	}
+
+	.lodge-repeat-image{
+		width: 100%;
+		padding: 6vw 0;
 	}
 }
