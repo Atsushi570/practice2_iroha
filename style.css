@@ -4,7 +4,7 @@
 # GLOBAL
 # HEADER
 # ABOUT
-# LODGE
+# MAIN-CONTENT
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -628,19 +628,22 @@ p
 /*--------------------------------------------------------------
 	# LODGE
 	--------------------------------------------------------------*/
-.lodge
+.section
 {
 	padding-top : 6.5vw;
+}
 
+.bg-grey
+{
 	background-color : #f2f2f2;
 }
 
-.lodge .container
+.section .container
 {
 	position : relative;
 }
 
-.lodge .container::after
+.section .container::after
 {
 	display : block;
 
@@ -649,7 +652,7 @@ p
 	content : '';
 }
 
-.lodge .section-title::after
+.bg-grey .section-title::after
 {
 	font-size : 5.5vw;
 
@@ -657,7 +660,6 @@ p
 	top : 0;
 	left : 0;
 
-	content : 'Lodge';
 	transform : translate(0 , 50%) rotate(270deg);
 
 	opacity : 0.1;
@@ -665,14 +667,23 @@ p
 	color : rgba(0, 0, 0, 0.8);
 }
 
+.lodge::after
+{
+	content : 'Lodge';
+}
+
 .lodge-content-wrapper
 {
 	position : absolute;
 	z-index : 2;
-	top : 11vw;
-	left : 13vw;
 
 	padding-bottom : 2.6vw;
+}
+
+.bg-grey .lodge-content-wrapper
+{
+	top : 11vw;
+	left : 13vw;
 
 	background-color : gray;
 	background-color : rgba(255, 255, 255, 0.9);
@@ -702,11 +713,15 @@ p
 {
 	position : absolute;
 	z-index : 1;
-	top : 3.8vw;
-	right : 3.8vw;
 
 	width : 46vw;
 	height : auto;
+}
+
+.bg-grey .lodge-image
+{
+	top : 3.8vw;
+	right : 3.8vw;
 }
 
 .lodge-repeat-image
@@ -725,23 +740,28 @@ p
 
 @media screen and (max-width: 413px)		/* 413px以下*/
 {
-	.lodge .container
+	.section
+	{
+		padding-top : 12vw;
+	}
+
+	.section .container
 	{
 		padding-right : 0;
 		padding-left : 0;
 	}
 
-	.lodge .container::after
+	.section .container::after
 	{
 		display : none;
 	}
 
-	.lodge .section-title
+	.section-title
 	{
 		text-align : center;
 	}
 
-	.lodge .section-title::after
+	.section .container .section-title::after
 	{
 		font-size : 19vw;
 
@@ -784,6 +804,7 @@ p
 	.lodge-repeat-image
 	{
 		width : 100%;
+		margin : 0;
 		padding : 6vw 0;
 	}
 }
