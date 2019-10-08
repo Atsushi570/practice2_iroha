@@ -79,6 +79,11 @@ p
 	border : 1px #707070 solid;
 }
 
+.sp-414
+{
+	display : none;
+}
+
 @media screen and (max-width: 768px)		/* 768px以下*/
 {
 	h1
@@ -99,6 +104,11 @@ p
 	.section-title
 	{
 		font-size : 6vw;
+	}
+
+	.sp-414
+	{
+		display : inline;
 	}
 }
 /*--------------------------------------------------------------
@@ -390,7 +400,7 @@ p
 	}
 }
 
-@media screen and (max-width: 413px)		/* 413px以下*/
+@media screen and (max-width: 414px)		/* 414px以下*/
 {
 	.header-wrapper::after
 	{
@@ -543,7 +553,7 @@ p
 	}
 }
 
-@media screen and (max-width: 413px)		/* 413px以下*/
+@media screen and (max-width: 414px)		/* 414px以下*/
 {
 	.about
 	{
@@ -638,9 +648,16 @@ p
 	background-color : #f2f2f2;
 }
 
+.bg-white
+{
+	background-color : white;
+}
+
 .section .container
 {
 	position : relative;
+
+	margin-right : 4vw;
 }
 
 .section .container::after
@@ -655,28 +672,44 @@ p
 .section-title::before
 {
 	position : absolute;
-	top : 5vw;
-	left : 18vw;
 
 	display : inline-block;
 
-	width : 15%;
 	height : 2px;
 
 	content : '';
 
+	background-color : grey;
 	background-color : rgba(0, 0, 0, 0.8);
 }
 
-.bg-grey .section-title::after
+.lodge::before
 {
-	font-size : 5.5vw;
+	top : 5vw;
+	left : 18vw;
 
+	width : 15%;
+}
+
+.food::before
+{
+	top : 5vw;
+	left : 18vw;
+
+	width : 20%;
+}
+
+.interactive::before
+{
+	top : 5vw;
+	left : 18vw;
+
+	width : 23%;
+}
+
+.section .section-title::after
+{
 	position : absolute;
-	top : 0;
-	left : 0;
-
-	transform : translate(0 , 50%) rotate(270deg);
 
 	opacity : 0.1;
 	color : gray;
@@ -685,10 +718,38 @@ p
 
 .lodge::after
 {
+	font-size : 5.5vw;
+
+	top : 0;
+	left : 0;
+
 	content : 'Lodge';
+	transform : translate(0 , 50%) rotate(270deg);
 }
 
-.lodge-content-wrapper
+.food::after
+{
+	font-size : 3.6vw;
+
+	top : 16vw;
+	left : -12vw;
+
+	content : 'Food Atelier& Lounge';
+	transform : translate(0 , 50%) rotate(270deg);
+}
+
+.interactive::after
+{
+	font-size : 5.2vw;
+
+	top : 8vw;
+	left : -5vw;
+
+	content : 'Interactive';
+	transform : translate(0 , 50%) rotate(270deg);
+}
+
+.content-wrapper
 {
 	position : absolute;
 	z-index : 2;
@@ -696,7 +757,7 @@ p
 	padding-bottom : 2.6vw;
 }
 
-.bg-grey .lodge-content-wrapper
+.bg-grey .content-wrapper
 {
 	top : 11vw;
 	left : 13vw;
@@ -705,7 +766,16 @@ p
 	background-color : rgba(255, 255, 255, 0.9);
 }
 
-.lodge-content-wrapper p
+.bg-white .content-wrapper
+{
+	top : 3.8vw;
+	right : 0;
+
+	background-color : grey;
+	background-color : rgba(242, 242, 242, 0.9);
+}
+
+.content-wrapper p
 {
 	display : block;
 
@@ -713,48 +783,68 @@ p
 	padding : 4vw 8vw 4vw 4vw;
 }
 
-.lodge-content-wrapper .btn-lg-wrapper
+.content-wrapper .btn-lg-wrapper
 {
 	margin : 0;
 
 	text-align : right;
 }
 
-.lodge-content-wrapper .btn-lg-wrapper .btn-lg
+.content-wrapper .btn-lg-wrapper .btn-lg
 {
 	margin : 0 4vw 0 0 ;
 }
 
-.lodge-image
+.section-image
 {
 	position : absolute;
 	z-index : 1;
 
-	width : 46vw;
 	height : auto;
 }
 
-.bg-grey .lodge-image
+.bg-grey .section-image
 {
 	top : 3.8vw;
-	right : 3.8vw;
+	right : 0;
+
+	width : 46vw;
 }
 
-.lodge-repeat-image
+.bg-white .section-image
 {
-	width : 80vw;
-	margin-left : 13vw;
+	top : 12vw;
+	left : 15vw;
+
+	width : 42vw;
+}
+
+.section-image img
+{
+	width : 100%;
+	height : auto;
+}
+
+.repeat-image-wrapper
+{
+	padding : 0 4vw 8vw 13vw;
+}
+
+.repeat-image-wrapper img
+{
+	width : 100%;
+	height : auto;
 }
 
 @media screen and (max-width: 768px)		/* 768px以下*/
 {
-	.lodge-content-wrapper
+	.content-wrapper
 	{
 		top : 6vw;
 	}
 }
 
-@media screen and (max-width: 413px)		/* 413px以下*/
+@media screen and (max-width: 414px)		/* 414px以下*/
 {
 	.section
 	{
@@ -763,17 +853,35 @@ p
 
 	.section .container
 	{
+		margin-right : 0;
 		padding-right : 0;
 		padding-left : 0;
 	}
 
-	.section-title::before
-{
-	top: 12vw;
-	left: 45%;
-	width: 40%;
+	.lodge::before
+	{
+		top : 12vw;
+		left : 35%;
 
-}	
+		width : 50%;
+	}
+
+	.food::before
+	{
+		top : 12vw;
+		left : 35%;
+
+		width : 50%;
+	}
+
+	.interactive::before
+	{
+		top : 18vw;
+		left : 35%;
+
+		width : 50%;
+	}
+
 	.section .container::after
 	{
 		display : none;
@@ -784,18 +892,31 @@ p
 		text-align : center;
 	}
 
-	.section .container .section-title::after
+	.lodge::after
 	{
 		font-size : 19vw;
 
-		top : 0;
-		left : 0;
-
-		transform : translate(-15% , 140%) rotate(270deg);
+		top : 20vw;
+		left : -10vw;
 	}
 
+	.food::after
+	{
+		font-size : 9vw;
 
-	.lodge-content-wrapper
+		top : 55vw;
+		left : -30vw;
+	}
+
+	.interactive::after
+	{
+		font-size : 9vw;
+
+		top : 55vw;
+		left : -30vw;
+	}
+
+	.content-wrapper
 	{
 		position : static;
 
@@ -804,7 +925,7 @@ p
 		padding-bottom : 8vw;
 	}
 
-	.lodge-content-wrapper p
+	.content-wrapper p
 	{
 		font-size : 3.6vw;
 
@@ -812,19 +933,19 @@ p
 		padding-left : 8vw;
 	}
 
-	.lodge-content-wrapper .btn-lg-wrapper
+	.content-wrapper .btn-lg-wrapper
 	{
 		font-size : 2.8vw;
 	}
 
-	.lodge-image
+	.section .container .section-image
 	{
 		position : static;
 
 		width : 100%;
 	}
 
-	.lodge-repeat-image
+	.repeat-image-wrapper
 	{
 		width : 100%;
 		margin : 0;
