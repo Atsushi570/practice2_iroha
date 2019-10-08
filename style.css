@@ -652,6 +652,22 @@ p
 	content : '';
 }
 
+.section-title::before
+{
+	position : absolute;
+	top : 5vw;
+	left : 18vw;
+
+	display : inline-block;
+
+	width : 15%;
+	height : 2px;
+
+	content : '';
+
+	background-color : rgba(0, 0, 0, 0.8);
+}
+
 .bg-grey .section-title::after
 {
 	font-size : 5.5vw;
@@ -751,6 +767,13 @@ p
 		padding-left : 0;
 	}
 
+	.section-title::before
+{
+	top: 12vw;
+	left: 45%;
+	width: 40%;
+
+}	
 	.section .container::after
 	{
 		display : none;
