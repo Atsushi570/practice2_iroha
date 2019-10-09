@@ -5,6 +5,7 @@
 # HEADER
 # ABOUT
 # MAIN-CONTENT
+# CONTACTS
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -950,5 +951,154 @@ p
 		width : 100%;
 		margin : 0;
 		padding : 6vw 0;
+	}
+}
+
+/*--------------------------------------------------------------
+# CONTACTS
+--------------------------------------------------------------*/
+.lead-wrapper
+{
+	text-align : center;
+}
+
+.lead-wrapper > p
+{
+	font-size : 1.45vw;
+
+	margin : 0;
+	padding : 4.6vw 12.2vw;
+}
+
+.contacts-wrapper
+{
+	display : flex;
+
+	margin-right : 8.86vw;
+	margin-left : 8.86vw;
+	padding-bottom : 7.8vw;
+}
+
+.contact-item
+{
+	position : relative;
+
+	width : 50%;
+	margin-right : 9.3vw;
+}
+
+.contact-item::after
+{
+	position : absolute;
+	z-index : -1;
+	top : 0;
+	left : 2vw;
+
+	width : 35vw;
+	height : 20vw;
+
+	content : '';
+
+	background-color : #f4f4f4;
+}
+
+.contact-item h3
+{
+	font-size : 2vw;
+	font-weight : 200;
+
+	color : grey;
+	color : rgba(0, 0, 0, 0.8);
+	text-shadow : 3px 3px 2px gray;
+	text-shadow : 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item p
+{
+	font-size : 1vw;
+
+	padding-left : 4.3vw;
+
+	letter-spacing : 0.1vw;
+}
+
+.contact-item .btn-lg-wrapper
+{
+	transform : translateX(8vw);
+	text-align : right;
+}
+
+.contact-item.xs
+{
+	display : none;
+}
+
+@media screen and (max-width: 414px)		/* 414px以下*/
+{
+	.lead-wrapper p
+	{
+		font-size : 3vw;
+		padding-top: 20vw;
+		padding-bottom: 35vw;
+	}
+
+	.contacts-wrapper
+	{
+		display : block;
+
+		text-align : center;
+
+		padding-bottom: 30vw;
+	}
+
+	.contact-item::after
+	{
+		top : -2vw;
+		left : 7vw;
+
+		width : 100vw;
+		height : 90vw;
+	}
+
+	.contact-item.lg
+	{
+		display : none;
+	}
+
+	.contact-item.xs
+	{
+		display : block;
+
+		width : 100%;
+	}
+
+	.contact-item h3
+	{
+		font-size : 6vw;
+	}
+
+	.contact-item p
+	{
+		font-size : 3vw;
+
+		padding-bottom : 14.5vw;
+	}
+
+	.contact-item .btn-lg-wrapper
+	{
+		text-align : center;
+
+		transform: translateX(0);
+	}
+
+	.contact-item .btn-lg-wrapper .btn-lg
+	{
+		margin-left : 0;
+		padding: 2.2vw 4.4vw;
+	}
+
+	.contact-item.xs .btn-lg-wrapper:last-child
+	{
+		margin-top : 8vw;
 	}
 }
