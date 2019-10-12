@@ -266,6 +266,7 @@ p
 	.site-logo-wrapper
 	{
 		display : flex;
+		align-items: center;
 
 		width : 100%;
 		margin : 0;
@@ -291,53 +292,53 @@ p
 
 	.btn-menu
 	{
-		display : flex;
+		display : inline-block;
 		align-items : center;
+		position: relative;
+		width: 4vw;
+		height: 4vw;
 
-		margin-right : 3vw;
+		margin-right : 5vw;
 		margin-left : auto;
 	}
 
-	/* ハンバーガーメニューのアイコン */
-	.btn-menu span ,
-	.btn-menu span::before ,
-	.btn-menu span::after
+	.btn-menu span 
 	{
-		display : block;
+		display : inline-block;
+		position: absolute;
+		left: 0;
 
-		width : 3.9vw;	/*長さ*/
+		width : 4vw;	/*長さ*/
 		height : 2px;		/*線の太さ*/
-
-		content : '';
-		cursor : pointer;
 
 		border-radius : 2px;
 		background : white;
 	}
 
-	.nav-open span
-	{
-		background : none;
+	.btn-menu span:nth-of-type(1){
+		top: 0;
 	}
 
-	.btn-menu span::before
-	{
-		transform : translateY(1.7vw);
+	.btn-menu span:nth-of-type(2){
+		top: 50%;
 	}
 
-	.nav-open span::before
-	{
+	.btn-menu span:nth-of-type(3){
+		top: 100%;
+	}
+
+	.btn-menu.nav-open span:nth-of-type(1){
 		transform : rotate(-45deg);
+		top: 50%;
 	}
 
-	.btn-menu span::after
-	{
-		transform : translateY(-1.9vw);
+	.btn-menu.nav-open span:nth-of-type(2){
+		display: none;
 	}
 
-	.nav-open span::after
-	{
+	.btn-menu.nav-open span:nth-of-type(3){
 		transform : rotate(-135deg);
+		top: 50%;
 	}
 
 	.nav-wrapper
