@@ -346,6 +346,8 @@ p
 
 		display : block;
 
+		height : 100vh;
+
 		transform : translate(100%, 0);
 
 		background : black;
