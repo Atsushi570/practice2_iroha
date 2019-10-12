@@ -24,7 +24,7 @@
   ];
 
   // imgに適用する画像セットをウィンドウ幅から判定
-  const targetImageSet = window.innerWidth > 414 ? imageSetLarge : imageSetSmall;
+  const targetImageSet = window.innerWidth > 414 ? imageSetLarge.slice() : imageSetSmall.slice();
 
   let currentNum = 0;
   let slideImage = document.getElementById('headerSlide');
@@ -48,7 +48,6 @@
       } else {
         currentNum++;
       }
-      console.log(currentNum);
       autoPlay();
     }, 8000);
   }
