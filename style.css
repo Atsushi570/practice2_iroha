@@ -343,7 +343,7 @@ h2
 	}
 }
 
-@media screen and (max-width: 413px)		/* 413px以下*/
+@media screen and (max-width: 414px)		/* 414px以下*/
 {
 	.header-wrapper::after
 	{

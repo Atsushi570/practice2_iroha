@@ -1,80 +1,69 @@
+'use strict'
 
-var HEADER = {};
+{
+  // /*
+  //   headerのイメージを自動で変更する
+  // */
 
-
-/*
-  headerのイメージを自動で変更する
-*/
-
-HEADER.SLIDER = {
-
-  const: slideImage = document.getElementById('headerSlide'),   // headerに表示するimg要素
-  const: navMenu = document.getElementsByClassName('nav-menu'),
-  var: current = 0, // headerに表示するイメージリストのkey
-  var: imageSet = [],
-
-  // ウィンドウサイズが414px以上の時の画像セット
-  const: imageList = [
+  // ウィンドウ幅が415px以上の時の画像セット
+  const imageSetLarge = [
     "./assets/img/feature-image-1.png",
     "./assets/img/feature-image-2.png",
     "./assets/img/feature-image-3.png",
-    "./assets/img/feature-image-4.png",
+    "./img/feature-image-4.png",
     "./assets/img/feature-image-5.png",
     "./assets/img/feature-image-6.png"
-  ],
+  ];
 
-  // ウィンドウサイズが414px未満の時の画像セット
-  const: imageListSmall = [
+  // ウィンドウ幅が414px以下の時の画像セット
+  const imageSetSmall = [
     "./assets/img/feature-image-small-1.png",
     "./assets/img/feature-image-small-2.png",
     "./assets/img/feature-image-small-3.png",
     "./assets/img/feature-image-small-4.png",
-  ],
+  ];
 
-  // ウィンドウサイズによって画像セットを変更する
-  // 初期画像を設定する
+  // imgに適用する画像セットをウィンドウ幅から判定
+  const targetImageSet = window.innerWidth > 414 ? imageSetLarge : imageSetSmall;
 
-  init: function initImage() {
-    if (window.innerWidth >= 414) {
-      imageSet = imageList;
-    } else {
-      imageSet = imageListSmall;
-    }
-    slideImage.src = imageSet[current];
+  let currentNum = 0;
+  let slideImage = document.getElementById('headerSlide');
 
-  },
 
-  // 一定間隔でヘッダのスライドショー送りをする
-  slideshow: function autoPlay() {
+  function setSlideImage() {
+    slideImage.src = targetImageSet[currentNum];
+  }
+
+  function autoPlay() {
+    slideImage.classList.add("slideIn");
+    setSlideImage();
+
     setTimeout(() => {
+      slideImage.classList.remove("slideIn");
+    }, 3100);
 
-      if (current === imageSet.length - 1) {
-        current = 0;
+    setTimeout(() => {
+      if (currentNum === targetImageSet.length - 1) {
+        currentNum = 0;
       } else {
-        current++;
+        currentNum++;
       }
-
-      slideImage.classList.add("slideIn");
-      slideImage.src = imageSet[current];
-      setTimeout('slideImage.classList.remove("slideIn");', 3100);
+      console.log(currentNum);
       autoPlay();
     }, 8000);
-  },
-}
+  }
 
-window.onload = HEADER.SLIDER.init();
-window.onload = HEADER.SLIDER.slideshow();
+  autoPlay();
 
-/*
-  ハンバーガーメニューをクリック時にナビゲーションメニューを開く
-  Xボタンをクリック時にナビゲーションメニューを閉じる
-*/
+  // /*
+  //   ハンバーガーメニューをクリック時にナビゲーションメニューを開く
+  //   Xボタンをクリック時にナビゲーションメニューを閉じる
+  // */
+  const btnMenu = document.getElementById('btnMenu');
+  const navWrapper = document.getElementById('navWrapper');
 
-HEADER.NAV = {
-  const: btnMenu = document.getElementById("btnMenu"),
-  const: navWrapper = document.getElementById("navWrapper"),
+  btnMenu.addEventListener('click', () => {
 
-  operation: btnMenu.onclick = () => {
     if (navWrapper.classList.contains("nav-open")) {
       navWrapper.classList.remove("nav-open");
       navWrapper.classList.add("nav-close");
@@ -90,5 +79,8 @@ HEADER.NAV = {
       btnMenu.classList.remove("nav-close");
       btnMenu.classList.add("nav-open");
     }
-  },
+  })
+
 }
+
+
