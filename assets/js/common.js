@@ -27,7 +27,7 @@
   const targetImageSet = window.innerWidth > 414 ? imageSetLarge.slice() : imageSetSmall.slice();
 
   let currentNum = 0;
-  let slideImage = document.getElementById('headerSlide');
+  const slideImage = document.getElementById('headerSlide');
 
 
   function setSlideImage() {
