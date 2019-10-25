@@ -10,7 +10,7 @@
     "./assets/img/feature-image-1.png",
     "./assets/img/feature-image-2.png",
     "./assets/img/feature-image-3.png",
-    "./img/feature-image-4.png",
+    "./assets/img/feature-image-4.png",
     "./assets/img/feature-image-5.png",
     "./assets/img/feature-image-6.png"
   ];
