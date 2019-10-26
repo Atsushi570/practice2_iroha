@@ -989,7 +989,7 @@ p
 
 	margin-right : 8.86vw;
 	margin-left : 8.86vw;
-	padding-bottom : 7.8vw;
+	padding-bottom : 15vw;
 }
 
 .contact-item
@@ -1037,7 +1037,7 @@ p
 
 .contact-item .btn-lg-wrapper
 {
-	transform : translateX(8vw);
+	transform : translateX(7vw);
 	text-align : right;
 }
 
