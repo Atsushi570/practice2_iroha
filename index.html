@@ -23,16 +23,23 @@
 
   <!-- HEADER
 ================================================== -->
-  <header>
+  <header class=>
     <div class="header-wrapper">
       <div class="site-navigation">
 
-        <h1>
-          <small>暮らしの体験宿</small>いろは
-          <p>-Yakushima Lodge& Food Atelier-</p>
-        </h1>
+        <div class="site-logo-wrapper">
+          <h1>
+            <small>暮らしの体験宿</small>いろは
+            <p>-Yakushima Lodge& Food Atelier-</p>
+          </h1>
 
-        <nav>
+          <div id="btnMenu" class="btn-menu">
+            <span></span>
+          </div><!-- /.btn-menu -->
+
+        </div><!-- /.site-logo-wrapper -->
+
+        <nav id="navWrapper" class='nav-wrapper'>
           <ul class="nav-menu">
             <li><a href="#">About iroha<p>-いろはのこと-</p></a></li>
             <li><a href="#">Lodge<p>-宿泊ロッジ-</p></a></li>
@@ -40,19 +47,54 @@
             <li><a href="#">Interactive<br>Program<p>-体験プログラム-</p></a></li>
             <li><a href="#">Booking<p>-ご予約-</p></a></li>
           </ul><!-- /.nav-menu -->
+
+          <div class="icon-wrapper">
+            <a href="#"><img src="./assets/img/icon-facebook.png" alt="icon-facebook"></a><!-- /.nav-icon -->
+            <a href="#"><img src="./assets/img/icon-instagram.png" alt="icon-instagram"></a><!-- /.nav-icon -->
+          </div><!-- /.icon-wrapper -->
+
         </nav>
+
       </div><!-- /.site-navigation -->
 
-      <img src="./assets/img/feature-background-1.png" alt="feature-background-1">
+      <img id="headerSlide" alt="feature-image">
 
     </div><!-- /.header-wrapper -->
   </header>
 
   <main>
-    <section></section>
+    <section class="about">
+      <div class="container">
+
+        <div class="about-content">
+          <h2>「stay iroha as live」</h2>
+          <p>テキストテキストテキスト<br>
+            屋久島の地で、、、いろはで、感じて欲しいこと。<br>
+            <br>
+            作っていきたい空間。<br>
+            丸さんたちの想い。<br>
+            暮らしの体験宿、いろは</p>
+
+          <p>English version About iroha. </p>
+
+          <a href="#" class="btn-lg">Read more</a><!-- /.btn-lg -->
+
+        </div><!-- /.about-content -->
+
+        <div class="about-images">
+          <img src="./assets/img/about-image-1.png" alt="about-image-1">
+          <img src="./assets/img/about-image-2.png" alt="about-image-2">
+        </div><!-- /.about-images -->
+
+      </div><!-- /.container -->
+    </section><!-- /.about -->
+
+    <section>test</section>
   </main>
 
   <footer>
   </footer>
+
+  <script src="./assets/js/common.js"></script>
 
   </html>
