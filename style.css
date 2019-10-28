@@ -647,7 +647,7 @@ p{
 	top : 0;
 	z-index : -1;
 }
-.contact-item h3{
+.contact-item h2{
 	font-size : 2vw;
 	font-weight : 200;
 	color : grey;
@@ -691,7 +691,7 @@ p{
 		display : block;
 		width : 100%;
 	}
-	.contact-item h3{
+	.contact-item h2{
 		font-size : 6vw;
 	}
 	.contact-item p{
@@ -713,53 +713,53 @@ p{
 /*--------------------------------------------------------------
 # FOOTER
 --------------------------------------------------------------*/
-.site-footer .footer-content-wrapper{
+.site-bottom .bottom-content-wrapper{
 	display : flex;
 	width : 100%;
 	background-color : black;
 	background-color : rgba(0, 0, 0, 0.95);
 	position : relative;
 }
-.site-footer .logo-wrapper{
+.site-bottom .logo-wrapper{
 	width : 20vw;
 	margin : 0 2.6vw;
 }
-.site-footer .logo-wrapper img{
+.site-bottom .logo-wrapper img{
 	width : 100%;
 	height : auto;
 	margin : 3vw 0;
 }
-.footer-content-wrapper .icon-wrapper{
+.bottom-content-wrapper .icon-wrapper{
 	display : none;
 }
-.footer-content{
+.bottom-content{
 	padding : 2.2vw 0 0 1.2vw ;
 	color : white;
 }
-.footer-content.contact{
+.bottom-content.contact{
 	margin-right : 4vw;
 	margin-left : auto;
 }
-.footer-content h3{
+.bottom-content h2{
 	font-size : 1.5vw;
 	display : inline;
 	padding : 0.1vw 0;
 	border-bottom : gray 1px solid;
 	border-bottom : rgba(255, 255, 255, 0.9) 1px solid;
 }
-.footer-content p{
+.bottom-content p{
 	font-size : 1.2vw;
 	margin : 0;
 	padding : 1vw 0 0 0;
 }
-.footer-content.contact p{
+.bottom-content.contact p{
 	padding-left : 2vw;
 }
-.footer-content .icon-wrapper{
+.bottom-content .icon-wrapper{
 	display : block;
 	padding-top : 1vw;
 }
-.footer-content .icon-wrapper img{
+.bottom-content .icon-wrapper img{
 	width : 3.3vw;
 	height : auto;
 	margin : 0;
@@ -769,41 +769,41 @@ p{
 	background-color : grey;
 	background-color : rgba(0, 0, 0, 0.8);
 }
-.copyright h4{
+.copyright p{
 	font-size : 0.8vw;
 	margin : 0;
 	padding : 1.3vw 0 1.3vw 3.4vw;
 	content : 'Copyright©︎暮らしの体験宿　いろは';
 }
 @media screen and (max-width: 414px)		/* 414x以下*/{
-	.site-footer .footer-content-wrapper{
+	.site-bottom .bottom-content-wrapper{
 		align-items : center;
 		flex-direction : column;
 		text-align : center;
 	}
-	.footer-content-wrapper .logo-wrapper{
+	.bottom-content-wrapper .logo-wrapper{
 		width : 60vw	;
 		padding : 0;
 	}
-	.footer-content-wrapper .icon-wrapper{
+	.bottom-content-wrapper .icon-wrapper{
 		display : flex;
 		align-items : center;
 		justify-content : space-around;
 		width : 60%;
 		padding : 5vw 0;;
 	}
-	.footer-content-wrapper .icon-wrapper img{
+	.bottom-content-wrapper .icon-wrapper img{
 		width : 10vw;
 		padding : 0;
 	}
-	.footer-content .rm-414{
+	.bottom-content .rm-414{
 		display : none;
 	}
-	.footer-content-wrapper .footer-content.contact{
+	.bottom-content-wrapper .bottom-content.contact{
 		margin : 0;
 		padding : 0;
 	}
-	.footer-content-wrapper .footer-content.contact p{
+	.bottom-content-wrapper .bottom-content.contact p{
 		font-size : 3vw;
 		margin : 0;
 		padding : 5vw 0;
